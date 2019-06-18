@@ -32,6 +32,18 @@ class TBAA:
             self.repo.git.pull()
 
 
+    def build_year_teams(self, year):
+        for page in range(30):
+            teams = self.tba.teams(page, year)
+
+            if len(teams) == 0:
+                break
+            keys = teams[0].keys()
+            for team in teams:
+                # TODO finish this
+                print("memes")
+
+
 
 
 if __name__ == '__main__':
